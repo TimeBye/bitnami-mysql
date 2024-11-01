@@ -19,6 +19,9 @@ jobs:
         username: ${{ secrets.DOCKERHUB_USERNAME }}
         password: ${{ secrets.DOCKERHUB_TOKEN }}
 
+    - name: Clean Docker
+      run: docker system prune -a -f --volumes 
+
     - name: Build and push
       uses: docker/build-push-action@v4
       with:
