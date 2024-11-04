@@ -1,40 +1,12 @@
 # https://downloads.bitnami.com/files/stacksmith/mysql-5.7.43-2-linux-amd64-debian-11.tar.gz --> BUILD.txt
 FROM setzero/mysql:5.7.44 AS build
-RUN strip /opt/bitnami/mysql/bin/innochecksum
-RUN strip /opt/bitnami/mysql/bin/lz4_decompress
-RUN strip /opt/bitnami/mysql/bin/my_print_defaults
-RUN strip /opt/bitnami/mysql/bin/myisam_ftdump
-RUN strip /opt/bitnami/mysql/bin/myisamchk
-RUN strip /opt/bitnami/mysql/bin/myisamlog
-RUN strip /opt/bitnami/mysql/bin/myisampack
-RUN strip /opt/bitnami/mysql/bin/mysql
+
 RUN strip /opt/bitnami/mysql/bin/mysql_client_test
 RUN strip /opt/bitnami/mysql/bin/mysql_client_test_embedded
-RUN strip /opt/bitnami/mysql/bin/mysql_config_editor
 RUN strip /opt/bitnami/mysql/bin/mysql_embedded
-RUN strip /opt/bitnami/mysql/bin/mysql_install_db
-RUN strip /opt/bitnami/mysql/bin/mysql_plugin
-RUN strip /opt/bitnami/mysql/bin/mysql_secure_installation
-RUN strip /opt/bitnami/mysql/bin/mysql_ssl_rsa_setup
-RUN strip /opt/bitnami/mysql/bin/mysql_tzinfo_to_sql
-RUN strip /opt/bitnami/mysql/bin/mysql_upgrade
-RUN strip /opt/bitnami/mysql/bin/mysqladmin
-RUN strip /opt/bitnami/mysql/bin/mysqlbinlog
-RUN strip /opt/bitnami/mysql/bin/mysqlcheck
-RUN strip /opt/bitnami/mysql/bin/mysqld
-RUN strip /opt/bitnami/mysql/bin/mysqldump
-RUN strip /opt/bitnami/mysql/bin/mysqlimport
-RUN strip /opt/bitnami/mysql/bin/mysqlpump
-RUN strip /opt/bitnami/mysql/bin/mysqlshow
-RUN strip /opt/bitnami/mysql/bin/mysqlslap
 RUN strip /opt/bitnami/mysql/bin/mysqltest
 RUN strip /opt/bitnami/mysql/bin/mysqltest_embedded
 RUN strip /opt/bitnami/mysql/bin/mysqlxtest
-RUN strip /opt/bitnami/mysql/bin/perror
-RUN strip /opt/bitnami/mysql/bin/replace
-RUN strip /opt/bitnami/mysql/bin/resolve_stack_dump
-RUN strip /opt/bitnami/mysql/bin/resolveip
-RUN strip /opt/bitnami/mysql/bin/zlib_decompress
 
 # Copyright VMware, Inc.
 # SPDX-License-Identifier: APACHE-2.0
