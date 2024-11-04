@@ -1,6 +1,6 @@
 # https://downloads.bitnami.com/files/stacksmith/mysql-5.7.43-2-linux-amd64-debian-11.tar.gz --> BUILD.txt
 FROM setzero/mysql:5.7.44 AS build
-
+USER 0
 RUN strip /opt/bitnami/mysql/bin/mysql_client_test
 RUN strip /opt/bitnami/mysql/bin/mysql_client_test_embedded
 RUN strip /opt/bitnami/mysql/bin/mysql_embedded
